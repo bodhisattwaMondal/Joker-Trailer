@@ -1,0 +1,186 @@
+/* Googgle Fonts  */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/* Reset  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body  */
+body{
+    font-family: 'Poppins', sans-serif;;
+    color: whitesmoke;
+}
+
+/* Header Portion  */
+header{
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    margin: 30px 15px;
+    padding-left: 400px;
+}
+
+
+header .toggle{
+    position: absolute;
+    right: 30px;
+    /* border: 2px solid greenyellow; */
+}
+
+header .toggle > img{
+    width: 50px;
+}
+
+
+.main-container::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: url(../img/bg1.jpg) no-repeat center center/cover;
+}
+ 
+.presentation{
+    /* border: 2px solid orangered; */
+     width: 40%;
+    height: 70vh;
+    margin-left: 16%;
+    margin-top: 100px;
+} 
+
+.presentation .text > h1{
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    font-size: 3rem;
+}
+
+.presentation .text h1 > span{
+    font-weight: 1000;
+}
+
+.presentation .text p{
+
+    width: 100%;
+    font-size: 1.2rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.5em;
+    margin: 25px 0px 40px ;
+}
+
+
+
+.presentation .watch-trailer .watch-play{
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    align-items: center;
+    letter-spacing: 0.1em;
+}
+
+/* Slide Portion */
+.presentation .slide{
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    height: 350px;
+    width: 250px;
+    animation: animate 7s;
+}
+
+
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.presentation .slide img{
+    height: 100%;
+}
+
+
+/* Social Media Icons */
+.media-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    /* border: 2px solid white; */
+}
+
+.media-icon .media ul li{
+    list-style: none;
+    padding: 15px;
+}
+
+.media-icon .media ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.media-icon .media ul li:nth-child(1) a:hover{
+    color: #3b5998;
+}
+
+.media-icon .media ul li:nth-child(2) a:hover{
+    color:  #007bb6;
+}
+
+.media-icon .media ul li:nth-child(3) a:hover{
+    color:  #e4405f;
+}
+
+/* Video  */
+.trailer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.95);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    max-width: 1280px;
+    outline: none;
+}
+
+.trailer img{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    filter: invert(1);
+    cursor: pointer;
+    max-width: 32px;
+}

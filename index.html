@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Movie Landing Page</title>
+</head>
+
+<body>
+    <!-- Main Container Wrapper  -->
+    <div class="main-container">
+        <!-- Header Portion -->
+        <header class="header-wrapper">
+            <div class="logo">
+                <a href="" class="logo-wrapper">
+                    <img src="img/logo.png" alt="Joker">
+                </a>
+            </div>
+            <div class="toggle">
+                <img src="img/toggle.png" alt="ToggleBar">
+            </div>
+        </header>
+
+        <!-- Main Presentation -->
+        <main class="presentation">
+            <div class="text">
+                <h1 class="title">Put on a <span>Happy</span> face</h1>
+                <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos cupiditate quam quis
+                    deserunt quia adipisci, incidunt esse natus blanditiis libero nobis recusandae, sapiente nam sed ea!
+                    Eveniet qui, nihil vero aliquam natus obcaecati dicta excepturi sed laudantium, assumenda laboriosam
+                    quaerat maxime cumque in a rerum voluptatum quis pariatur dolorum nisi.</p>
+            </div>
+            <div class="watch-trailer">
+                <a href="#" class="watch-play" onclick="toggle();">
+                    <img src="img/play.png" alt="Play">
+                    &nbsp; &nbsp; watch trailer
+                </a>
+            </div>
+
+            <div class="slide">
+                <img src="img/joker.png" alt="">
+            </div>
+        </main>
+
+        <!-- Social Media Icons  -->
+        <aside class="media-icon">
+            <div class="media">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <div class="trailer">
+        <video src="video/JOKER - Final Trailer - Now Playing In Theaters.mp4" controls="true">
+        </video>
+        <img src="img/close.png" alt="Close" class="close" onclick="toggle();">
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
